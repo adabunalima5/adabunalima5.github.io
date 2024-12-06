@@ -187,68 +187,7 @@ body {
 
 
 	
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Flowering Ornamental Plants",
-      "item": "{{site.url}}/flowering"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Foliage Ornamental Plants",
-      "item": "{{site.url}}/foliage"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Hanging Ornamental Plants",
-      "item": "{{site.url}}/hanging"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Miniature or Bonsai Ornamental Plants",
-      "item": "{{site.url}}/bonsai"
-    },
-    {
-      "@type": "ListItem",
-      "position": 5,
-      "name": "Aquatic Ornamental Plants",
-      "item": "{{site.url}}/aquatic"
-    },
-    {
-      "@type": "ListItem",
-      "position": 6,
-      "name": "Toxic Ornamental Plants",
-      "item": "{{site.url}}/toxic"
-    },
-    {
-      "@type": "ListItem",
-      "position": 7,
-      "name": "Rare or Unique Ornamental Plants",
-      "item": "{{site.url}}/unique"
-    },
-    {
-      "@type": "ListItem",
-      "position": 8,
-      "name": "Edible Ornamental Plants",
-      "item": "{{site.url}}/edible"
-    },
-    {
-      "@type": "ListItem",
-      "position": 9,
-      "name": "Fragrant Ornamental Plants",
-      "item": "{{site.url}}/fragrant"
-    }
-  ]
-}
-</script>
+
 
 </head>
 
@@ -272,11 +211,7 @@ body {
 </div>
 
 <nav class="sidebar hide" id="sidebar">
-<div style="padding:10px" >
-   <br /><br /> <p class="lead"><span style="color:#fff;">
-        {{ site.description }}
-    </span></p> 
-</div>
+<br /><br /><div style="padding: 10px;">{% include search-lunr.html %}</div>
 
 	<details><summary>Gardening</summary>
   <ul>
@@ -317,7 +252,7 @@ Marketing Automation</a></li>
             </ul>
 </details>
 	
-  <div style="padding: 10px;">{% include search-lunr.html %}</div>
+  
 </nav>
 
 <div class="content">
