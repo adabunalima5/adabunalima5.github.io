@@ -132,10 +132,9 @@ image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1hkfLDvrFwDj
           <div class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
             <div class="card">
            <a href="{{ post.url }}">   <img src="{{ post.image }}" class="card-img-top" alt="{{ post.title }}">
-           </a>
+           
               <div class="card-body">
-                <h5 class="card-title" style="max-width:100%;">{{ post.title }}</h5>
-                <a href="{{ post.url }}" class="btn btn-primary">Read More
-                        </a>
-</div></div><br /></div>{% endfor %}</div>
+                <h5 class="card-title" style="max-width:100%;">{{ post.title }}</h5>                
+</div></a>
+            </div><br /></div>{% endfor %}</div>
 </div>
