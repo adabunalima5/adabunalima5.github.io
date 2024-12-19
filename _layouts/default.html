@@ -220,72 +220,29 @@ body {
 <nav class="sidebar hide" id="sidebar">
 <br /><br /><div style="padding: 10px;">{% include search-lunr.html %}</div>
 
-	<details><summary>Gardening</summary>
-  <ul>
-  	
-    <li><a href="/flowering">Flowering Ornamental Plants</a></li>
-    
-    <li><a href="/foliage">Foliage Ornamental Plants</a></li>
-    
-    <li><a href="/hanging">Hanging Ornamental Plants</a></li>
-    
-    <li><a href="/bonsai">Miniature or Bonsai Ornamental Plants</a></li>
-    
-    <li><a href="/aquatic">Aquatic Ornamental Plants</a></li>
-    
-    <li><a href="/toxic">Toxic Ornamental Plants</a></li>
-    
-    <li><a href="/unique">Rare or Unique Ornamental Plants</a></li>
-	  <li><a href="/edible">Edible Ornamental Plants</a></li>
-	  <li><a href="/fragrant">Fragrant Ornamental Plants</a></li>
-    
-  </ul>
-	</details>
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            {% assign categories_list = site.categories %}
+            {% if categories_list.first[0] == null %}
+                {% for category in categories_list %}
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
+                {% endfor %}
+            {% else %}
+                {% for category in categories_list %}
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
+                {% endfor %}
+            {% endif %}
+            {% assign categories_list = nil %}
+		</div>
+	</div>
+</div>
 
-<details><summary>Digital Marketing</summary>
-<ul>
-           <li><a href="/seo">SEO</a></li>
-                <li><a href="/content-marketing">Content Marketing</a></li>
-                <li><a href="/social-media">Social Media Marketing</a></li>
-                <li><a href="/email-marketing">Email Marketing</a></li>
-                <li><a href="/ppc">PPC Advertising</a></li>
-                <li><a href="/affiliate-marketing">Affiliate Marketing</a></li>
-                <li><a href="/influencer-marketing">Influencer Marketing</a></li>
-                <li><a href="/analytics">Analytics & Data-Driven Marketing</a></li>
-                <li><a href="/cro">
-Conversion Rate Optimization (CRO)</a></li>
-                <li><a href="/marketing-automation">
-Marketing Automation</a></li>
-            </ul>
-</details>
-	
-  <details><summary>Vacation</summary>
-<ul>
-
-        <li><a href="/japan">Japan</a></li>
-        <li><a href="/thailand">Thailand</a></li>
-        <li><a href="/maldives">Maldives</a></li>
-        <li><a href="/indonesia">Indonesia</a></li>
-        
-        <li><a href="/france">France</a></li>
-        <li><a href="/italy">Italy</a></li>
-        <li><a href="/spain">Spain</a></li>
-        <li><a href="/greece">Greece</a></li>
-        
-        <li><a href="/united-states">United States</a></li>
-        <li><a href="/mexico">Mexico</a></li>
-        <li><a href="/brazil">Brazil</a></li>
-        <li><a href="/canada">Canada</a></li>
-        
-        <li><a href="/south-africa">South Africa</a></li>
-        <li><a href="/kenya">Kenya</a></li>
-        <li><a href="/egypt">Egypt</a></li>
-        <li><a href="/morocco">Morocco</a></li>
-        
-         
-
-   </ul>
-</details>
 </nav>
 
 <div class="content">
@@ -689,4 +646,3 @@ Marketing Automation</a></li>
 
 </body>
 </html>
-
