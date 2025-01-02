@@ -1,4 +1,4 @@
-var maxPosts = 5; // Jumlah maksimal postingan yang ingin ditampilkan
+var maxPosts = 15; // Jumlah maksimal postingan yang ingin ditampilkan
 
 function injectStyles() {
   var style = document.createElement("style");
@@ -58,7 +58,7 @@ function loadRelatedPosts() {
   if (labels.length == 0) return;
 
   var relatedPosts = [];
-  var feedUrlBase = 'https://your-blog-name.blogspot.com/feeds/posts/default/-/';
+  var feedUrlBase = '/feeds/posts/default/-/';
   labels.forEach(function (label) {
     var feedUrl = feedUrlBase + encodeURIComponent(label) + '?max-results=' + maxPosts;
     var script = document.createElement('script');
