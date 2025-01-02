@@ -1,4 +1,4 @@
-var maxPosts = 5; // Jumlah maksimal postingan yang ingin ditampilkan
+var maxPosts = 50; // Jumlah maksimal postingan yang ingin ditampilkan
 
   function getLabelsFromPost() {
     var labels = [];
