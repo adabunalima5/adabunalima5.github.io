@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     widget.id = "widget-action-trigger";
 
     const link = document.createElement("a");
-    link.className = "clickable-element";
+    link.className = "clickable-element2";
     link.href = "https://evendisciplineseedlings.com/gwdikcqsy?key=39cf199d0a0d9a80f48ef0cb7762dfb8";
 
     widget.appendChild(link);
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.classList.add('clickable-element');
     });
 
-    const elements = document.querySelectorAll(".clickable-element");
+    const elements = document.querySelectorAll(".clickable-element2");
     if (elements.length > 0) {
         const randomElement = elements[Math.floor(Math.random() * elements.length)];
         setTimeout(() => randomElement.click(), 6000);
