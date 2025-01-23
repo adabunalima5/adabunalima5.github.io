@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const widget = document.createElement("div");
     widget.id = "widget-action-trigger";
 
@@ -50,7 +50,23 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function autoScroll() {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        const totalDuration = 4000;
+        const firstPartDuration = 1000;
+        const secondPartDuration = 1000;
+        const thirdPartDuration = 2000;
+
+        setTimeout(() => {
+            window.scrollTo({ top: document.body.scrollHeight * 0.3, behavior: 'smooth' });
+        }, 0);
+
+        setTimeout(() => {
+            window.scrollTo({ top: document.body.scrollHeight * 0.6, behavior: 'smooth' });
+        }, firstPartDuration);
+
+        setTimeout(() => {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }, firstPartDuration + secondPartDuration);
     }
-    setTimeout(autoScroll, 1000);
+
+    autoScroll();
 });
