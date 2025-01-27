@@ -1,4 +1,4 @@
-/* Header Styling */
+/* Header Styles */
 #header {
   position: fixed;
   top: 0;
@@ -10,21 +10,22 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header-container {
+#header .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 15px;
 }
 
-.menu-button {
+#menu-toggle,
+#search-toggle {
   background-color: transparent;
   border: none;
   cursor: pointer;
   padding: 5px;
 }
 
-.menu-line {
+#menu-toggle div {
   width: 25px;
   height: 3px;
   background-color: white;
@@ -32,19 +33,12 @@
   transition: all 0.3s;
 }
 
-.blog-title {
+#header h1 {
   font-size: 22px;
   margin: 0;
   color: white;
   text-align: center;
   flex: 1;
-}
-
-.search-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
 }
 
 #menu {
@@ -53,7 +47,7 @@
   top: 50px;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: orange;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 10px;
 }
@@ -68,7 +62,13 @@
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+#menu li a:hover {
+  background-color: white;
+  color: orange;
+  border-radius: 5px;
 }
 
 #search-box {
@@ -76,7 +76,7 @@
   position: absolute;
   top: 50px;
   right: 10px;
-  background-color: white;
+  background-color: orange;
   padding: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -92,15 +92,17 @@
 #search-box input {
   flex: 1;
   padding: 8px 10px;
-  border: 1px solid #ddd;
+  border: 1px solid white;
   border-radius: 5px 0 0 5px;
   outline: none;
   font-size: 14px;
+  color: orange;
+  background-color: white;
 }
 
 #search-box button {
-  background-color: orange;
-  color: white;
+  background-color: white;
+  color: orange;
   border: none;
   padding: 8px 15px;
   font-size: 14px;
@@ -108,42 +110,48 @@
   cursor: pointer;
 }
 
-  .toggle-button {
-    cursor: pointer;
-    background-color: orange;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    display: inline-block;
-  }
-  #Label1 .widget-content {
-    display: none;
-  }
-  #Label1 .widget-content.visible {
-    display: block;
-  }
-  .lazy {
-    visibility: hidden;
-  }
-  .lazy.loaded {
-    visibility: visible;
-  }
+/* Toggle Button */
+.toggle-button {
+  cursor: pointer;
+  background-color: orange;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
 
-    
+#Label1 .widget-content,
+#BlogArchive1 .widget-content {
+  display: none;
+}
 
+#Label1 .widget-content.visible,
+#BlogArchive1 .widget-content.visible {
+  display: block;
+}
 
+/* Lazy Loading */
+.lazy {
+  visibility: hidden;
+}
+
+.lazy.loaded {
+  visibility: visible;
+}
+
+/* Widget Styles */
 div.widget {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  background-color: orange;
+  border: 1px solid white;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: &#39;Arial&#39;, sans-serif;
-  color: #333;
+  font-family: 'Arial', sans-serif;
+  color: white;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -155,20 +163,21 @@ div.widget:hover {
 div.widget h2 {
   font-size: 20px;
   font-weight: bold;
-  color: #333;
+  color: white;
   margin-bottom: 15px;
-  padding-bottom: 0;
-  border-bottom: none;
   text-transform: capitalize;
 }
 
 div.widget a {
-  color: #007bff;
+  color: white;
   text-decoration: none;
 }
 
 div.widget a:hover {
   text-decoration: underline;
+  color: orange;
+  background-color: white;
+  border-radius: 5px;
 }
 
 div.widget ul {
@@ -178,13 +187,5 @@ div.widget ul {
 
 div.widget ul li {
   margin-bottom: 8px;
+  color: white;
 }
-
-  
-    
-  
-  .toggle-button{cursor:pointer;background-color:#007bff;color:#fff;padding:5px 10px;border:none;border-radius:5px;font-size:14px;margin-bottom:10px;display:inline-block}
-  #BlogArchive1 .widget-content{display:none}
-  #BlogArchive1 .widget-content.visible{display:block}
-  .lazy{visibility:hidden}
-  .lazy.loaded{visibility:visible}
