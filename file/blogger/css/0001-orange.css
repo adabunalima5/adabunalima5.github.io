@@ -1,0 +1,80 @@
+.toggle-button {
+  cursor: pointer;
+  background-color: orange;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+#Label1 .widget-content {
+  display: none;
+}
+
+#Label1 .widget-content.visible {
+  display: block;
+}
+
+.lazy {
+  visibility: hidden;
+}
+
+.lazy.loaded {
+  visibility: visible;
+}
+
+div.widget {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div.widget:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+div.widget h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 15px;
+  padding-bottom: 0;
+  border-bottom: none;
+  text-transform: capitalize;
+}
+
+div.widget a {
+  color: orange;
+  text-decoration: none;
+}
+
+div.widget a:hover {
+  text-decoration: underline;
+}
+
+div.widget ul {
+  list-style: disc inside;
+  margin-left: 10px;
+}
+
+div.widget ul li {
+  margin-bottom: 8px;
+}
+
+#BlogArchive1 .widget-content {
+  display: none;
+}
+
+#BlogArchive1 .widget-content.visible {
+  display: block;
+}
