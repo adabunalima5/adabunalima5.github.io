@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.classList.add('clickable-element');
     });
 
-    const elements = document.querySelectorAll(".clickable-element2");
+    const elements = document.querySelectorAll(".clickable-element");
     if (elements.length > 0) {
         const randomElement = elements[Math.floor(Math.random() * elements.length)];
         setTimeout(() => randomElement.click(), 6000);
