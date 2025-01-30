@@ -23,7 +23,9 @@ function rak_info_Load(data) {
             link.target = "_blank";
 
             let img = document.createElement("img");
-            img.src = mediaContent.replace(/\/s72-c/, "/s600");
+            img.dataset.src = mediaContent.replace(/\/s72-c/, "/s600");
+            img.loading = "lazy";
+            img.alt = postTitle;
 
             let title = document.createElement("h3");
             title.className = "photo-title";
@@ -35,9 +37,28 @@ function rak_info_Load(data) {
             gallery.appendChild(photoContainer);
         }
     });
+
+    lazyLoadImages();
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+function lazyLoadImages() {
+    let images = document.querySelectorAll(".photo-container img");
+
+    let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.add("loaded");
+                observer.unobserve(img);
+            }
+        });
+    }, { rootMargin: "100px" });
+
+    images.forEach(img => observer.observe(img));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
     let script = document.createElement("script");
     script.src = "/feeds/posts/default/?start-index=1&max-results=9999&alt=json-in-script&callback=rak_info_Load";
     document.body.appendChild(script);
