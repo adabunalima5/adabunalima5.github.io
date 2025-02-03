@@ -80,3 +80,4 @@ var maxPosts = 50; // Jumlah maksimal postingan yang ingin ditampilkan
   }
 
   document.addEventListener('DOMContentLoaded', loadRelatedPosts);
+
