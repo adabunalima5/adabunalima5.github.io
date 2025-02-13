@@ -3,135 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Grid dengan Tag Blogger</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #181818;
-      color: #fff;
-    }
+  
+  
+  
+  
 
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 12px;
-      padding: 16px;
-    }
 
-    .video-item {
-      position: relative;
-      cursor: pointer;
-      background: black;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #181818;
+    color: #fff;
+  }
 
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      background: black;
-    }
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+    padding: 16px;
+  }
 
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: none;
-    }
+  .video-item {
+    position: relative;
+    cursor: pointer;
+    background: black;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
 
-    .thumbnail {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: black;
+  }
 
-    .play-icon {
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      transition: background 0.3s ease;
-    }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
 
-    .play-icon:hover {
-      background: rgba(255, 255, 255, 0.4);
-    }
+  .thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .play-icon svg {
-      width: 40px;
-      height: 40px;
-      fill: white;
-    }
+  .play-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: background 0.3s ease;
+  }
 
-    .video-item.playing .thumbnail {
-      display: none;
-    }
+  .play-icon:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
 
-    .video-item.playing iframe {
-      display: block;
-    }
+  .play-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: white;
+  }
 
-    .video-info {
-      padding: 8px;
-      font-size: 14px;
-      text-align: center;
-    }
-  </style>
+  .video-item.playing .thumbnail {
+    display: none;
+  }
+
+  .video-item.playing iframe {
+    display: block;
+  }
+
+  .video-info {
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+  }
+</style>
+
 </head>
 <body>
 
-<h1 id="pilihan-judul">Memuat Tag...</h1>
 <div id="youtube-video-grid" class="video-grid"></div>
 
 <script>
-async function fetchTagsFromBlogger() {
-  const FEED_URL = "https://www.xcelebgram.my.id/feeds/posts/default?alt=json";
+function getRandomTitle() {
+  const titleElement = document.getElementById("pilihan-judul");
+  if (!titleElement) return "Video Menarik";
   
-  try {
-    const response = await fetch(FEED_URL);
-    const data = await response.json();
-    
-    const tagSet = new Set();
-    
-    if (data.feed.entry) {
-      data.feed.entry.forEach(entry => {
-        if (entry.category) {
-          entry.category.forEach(cat => tagSet.add(cat.term));
-        }
-      });
-    }
-    
-    const tags = Array.from(tagSet);
-    
-    if (tags.length > 5) {
-      const randomTags = [];
-      while (randomTags.length < 5) {
-        const randomIndex = Math.floor(Math.random() * tags.length);
-        randomTags.push(tags.splice(randomIndex, 1)[0]);
-      }
-      document.getElementById("pilihan-judul").innerText = randomTags.join(" ");
-    } else {
-      document.getElementById("pilihan-judul").innerText = tags.join(" ");
-    }
-    
-  } catch (error) {
-    console.error("Gagal mengambil tag:", error);
-    document.getElementById("pilihan-judul").innerText = "Gagal Memuat Tag";
+  const titleWords = titleElement.innerText.split(' '); 
+  const randomTitles = [];
+
+  while (randomTitles.length < 5 && titleWords.length > 0) {
+    const randomIndex = Math.floor(Math.random() * titleWords.length);
+    const randomWord = titleWords.splice(randomIndex, 1)[0];
+    randomTitles.push(randomWord);
   }
+
+  return randomTitles.join(' '); 
 }
 
 async function fetchVideosFromRSS() {
@@ -154,8 +139,6 @@ async function fetchVideosFromRSS() {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-  await fetchTagsFromBlogger();
-  
   const videoGrid = document.getElementById("youtube-video-grid");
   const allVideos = await fetchVideosFromRSS();
 
@@ -163,7 +146,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     const videoItem = document.createElement("div");
     videoItem.classList.add("video-item");
     const videoUrl = `https://www.youtube.com/embed/${item.videoId}`;
-    
+    const randomTitle = getRandomTitle();
+
     videoItem.innerHTML = `
       <div class="video-wrapper">
         <iframe src="${videoUrl}" frameborder="0" allowfullscreen></iframe>
@@ -175,7 +159,9 @@ document.addEventListener("DOMContentLoaded", async function () {
           </div>
         </div>
       </div>
-      <div class="video-info">${item.title}</div>
+      <div class="video-info">
+        
+      </div>
     `;
 
     videoItem.addEventListener("click", function () {
@@ -188,7 +174,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   });
 });
 </script>
-
+  
   <!-- gulir kebawah dan 3 auto klik dengan pengecualian referrer hanya domain tertentu -->
 
 
@@ -422,5 +408,5 @@ document.addEventListener("DOMContentLoaded", function() {
 <script type="text/javascript" src="//evendisciplineseedlings.com/5fb4250a8668afd9928b28b1f9666ffb/invoke.js"></script></div></center>
 
 <script type='text/javascript' src='//evendisciplineseedlings.com/88/fe/af/88feaf107972e419b05280756fb47e0c.js'></script>
-</body>
-</html>
+  </body>
+  </html>
