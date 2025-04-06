@@ -3,7 +3,7 @@ function rak_info_Load(data) {
     let gallery = document.getElementById("gallery");
     let randomPosts = [];
 
-    while (randomPosts.length < 30 && entries.length > 0) {
+    while (randomPosts.length < 50 && entries.length > 0) {
         let randomIndex = Math.floor(Math.random() * entries.length);
         let randomPost = entries.splice(randomIndex, 1)[0];
         randomPosts.push(randomPost);
