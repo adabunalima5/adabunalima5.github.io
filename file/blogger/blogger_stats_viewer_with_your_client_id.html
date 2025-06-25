@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Blogger Stats Viewer</title>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    .btn { padding: 10px 15px; background: #4285f4; color: white; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>📊 Blogger Stats Viewer</h2>
+  <button class="btn" onclick="handleAuthClick()">Login with Google</button>
+  <button class="btn" onclick="loadStats()">Load Stats</button>
+  <table id="statsTable" style="display:none;">
+    <thead>
+      <tr>
+        <th>Blog ID</th>
+        <th>Blog Name</th>
+        <th>Today</th>
+        <th>Yesterday</th>
+        <th>This Month</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+<script>
+const blogIds = [
+  "4799809015966779342", "4741597335052212812", "2614651385125345722",
+  "6519813201877455483", "4958951760209091203", "5281570779204792703",
+  "4030147066120919305", "2266912155615686420", "4980704773185337981",
+  "3236465545628820289", "2910427018575643821", "2939149120816282910",
+  "2518978342274940385", "3802702732465921825", "8082058184471517556",
+  "426432824240678024", "1661452435288213297", "1906858802923772704",
+  "3528399648701748363", "3144283445144013040", "4453698372658454214",
+  "6117180680752861129", "1257838569029477808", "7267386795841356628",
+  "7050309486071792717", "7678159198057103701", "8952800453731962785",
+  "7271405296328039644", "4354504334951338636", "6903031882722694150",
+  "1517890249643362991"
+];
+
+const CLIENT_ID = '682001383766-1v9nq8mpfmndtmieh9d3lrkv78jneue6.apps.googleusercontent.com';
+const API_KEY = '';
+const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/blogger/v3/rest';
+const SCOPES = 'https://www.googleapis.com/auth/blogger.readonly';
+
+function handleClientLoad() { gapi.load('client:auth2', initClient); }
+
+function initClient() {
+  gapi.client.init({ apiKey: API_KEY, clientId: CLIENT_ID, discoveryDocs: [DISCOVERY_DOC], scope: SCOPES });
+}
+
+function handleAuthClick() {
+  gapi.auth2.getAuthInstance().signIn();
+}
+
+async function loadStats() {
+  document.getElementById('statsTable').style.display = 'table';
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = '';
+
+  for (const blogId of blogIds) {
+    try {
+      const blogResp = await gapi.client.blogger.blogs.get({ blogId });
+      const statsResp = await gapi.client.blogger.blogs.getPageViews({ blogId });
+
+      const blogName = blogResp.result.name || 'Unknown';
+      let today = 0, yesterday = 0, month = 0, total = 0;
+
+      statsResp.result.pageViews.forEach(view => {
+        if (view.timeRange === 'today') today = view.count;
+        if (view.timeRange === 'yesterday') yesterday = view.count;
+        if (view.timeRange === 'lastMonth') month = view.count;
+        if (view.timeRange === 'all') total = view.count;
+      });
+
+      const row = `<tr>
+        <td>${blogId}</td>
+        <td>${blogName}</td>
+        <td>${today}</td>
+        <td>${yesterday}</td>
+        <td>${month}</td>
+        <td>${total}</td>
+      </tr>`;
+      tbody.innerHTML += row;
+    } catch (err) {
+      console.error("Error loading stats for blogId:", blogId, err);
+    }
+  }
+}
+
+handleClientLoad();
+</script>
+</body>
+</html>
