@@ -281,7 +281,7 @@ pre::-webkit-scrollbar-thumb {
 }
 
 figure {
-  flex: 1 1 280px;
+  flex: 1 1;
   max-width: 100%;
   margin: 1rem;
   background: #fff;
