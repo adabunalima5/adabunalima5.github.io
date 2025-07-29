@@ -279,22 +279,17 @@ pre::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
   justify-content: center;
 }
-
 figure {
-  flex: 1 1;
+  width: 100%;
   max-width: 100%;
-  margin: 1rem;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  margin: 0 auto 20px;
 }
 
 figure img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 6px;
   cursor: pointer;
 }
 
