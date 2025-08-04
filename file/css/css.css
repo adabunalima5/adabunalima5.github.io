@@ -447,3 +447,26 @@ figure h3 {
   padding: 10px;
   box-sizing: border-box;
 }
+
+/* Gaya grid ringan tanpa efek berat */
+  .photo-box-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .photo-box {
+    border: 1px solid #ddd;
+    padding: 8px;
+    background: #fafafa;
+  }
+  .photo-box h3 {
+    font-size: 14px;
+    margin: 8px 0 0;
+    text-align: center;
+  }
+  .photo-box h3 a {
+    text-decoration: none;
+    color: #222;
+  }
+
