@@ -469,4 +469,26 @@ figure h3 {
     text-decoration: none;
     color: #222;
   }
+.disqus-wrapper {
+    max-width: 720px;
+    margin: 60px auto 40px;
+    padding: 0 16px;
+    background: #ffffff;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+    min-height: 320px;
+  }
+
+
+
+
+
+
+
+
+
+
 
