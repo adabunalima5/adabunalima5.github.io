@@ -261,7 +261,7 @@ pre::-webkit-scrollbar-thumb {
 
 /* ===== Disqus ===== */
 .disqus-wrapper {
-  border: 3px solid #ff5000;
+  border: 1px solid #ff5000;
   border-radius: 8px;
   padding: 10px;
   background-color: #fff9f5; /* soft tone from #ff5000 */
