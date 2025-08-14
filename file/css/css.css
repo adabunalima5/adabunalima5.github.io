@@ -260,20 +260,37 @@ pre::-webkit-scrollbar-thumb {
   border-radius: 4px;
 }
 
-/* ===== Disqus ===== */
+/* ===== Disqus ===== *
 .disqus-wrapper {
-  max-width: 720px;
-  margin: 60px auto 40px;
-  padding: 0 16px;
-  background: #ffffff;
-  border-top: 1px solid #e0e0e0;
+  border: 3px solid #ff5000;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff9f5; /* soft tone from #ff5000 */
 }
 
-#disqus_thread {
-  margin-top: 30px;
-  min-height: 320px;
+/* Custom heading before Disqus */
+.disqus-wrapper::before {
+  content: "💬 Join the Discussion";
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  color: #ff5000;
+  margin-bottom: 10px;
 }
 
+/* Links outside Disqus iframe */
+.disqus-wrapper a {
+  color: #ff5000;
+  text-decoration: none;
+}
+.disqus-wrapper a:hover {
+  color: #cc4000;
+}
+
+/* Optional: scrollbar accent */
+.disqus-wrapper ::-webkit-scrollbar-thumb {
+  background-color: #ff5000;
+}
 /* ===== Gallery ===== */
 #indrixFooterGallery {
   display: flex;
@@ -470,18 +487,7 @@ figure h3 {
     text-decoration: none;
     color: #222;
   }
-.disqus-wrapper {
-    max-width: 720px;
-    margin: 60px auto 40px;
-    padding: 0 16px;
-    background: #ffffff;
-    border-top: 1px solid #e0e0e0;
-  }
 
-  #disqus_thread {
-    margin-top: 30px;
-    min-height: 320px;
-  }
 :root {
   --main-color: #ff5000;
 }
