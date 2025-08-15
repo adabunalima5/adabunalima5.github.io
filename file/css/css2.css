@@ -2,8 +2,6 @@
 html, body {
   font-family: 'Inter', sans-serif;
   margin: 0 auto;
-  padding: 5px;
-  padding-top: 40px;
   width: 100%;
   max-width: 960px;
   box-sizing: border-box;
