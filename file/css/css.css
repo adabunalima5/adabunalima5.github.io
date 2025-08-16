@@ -70,7 +70,7 @@ header {
   left: 0;
   right: 0;
   z-index: 999;
-  background: #ff5000;
+  background: var(--dynamic-color);
   border-bottom: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
@@ -113,7 +113,7 @@ header {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background: #ff5000;
+  background: var(--dynamic-color);
   color: white;
   border-radius: 10%;
   padding: 6px;
@@ -126,7 +126,7 @@ header {
   position: fixed;
   bottom: 70px;
   left: 20px;
-  background: #ff5000;
+  background: var(--dynamic-color);
   color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -193,7 +193,7 @@ header {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #ff5000;
+  background: var(--dynamic-color);
   border-radius: 10%;
   padding: 4px;
   cursor: pointer;
@@ -261,35 +261,33 @@ pre::-webkit-scrollbar-thumb {
 
 /* ===== Disqus ===== */
 .disqus-wrapper {
-  border: 1px solid #ff5000;
+  border: 1px solid var(--dynamic-color);
   border-radius: 8px;
   padding: 10px;
-  background-color: #fff9f5; /* soft tone from #ff5000 */
+  background-color: #fff9f5;
 }
 
-/* Custom heading before Disqus */
 .disqus-wrapper::before {
   content: "💬 Join the Discussion";
   display: block;
   font-weight: bold;
   font-size: 18px;
-  color: #ff5000;
+  color: var(--dynamic-color);
   margin-bottom: 10px;
 }
 
-/* Links outside Disqus iframe */
 .disqus-wrapper a {
-  color: #ff5000;
+  color: var(--dynamic-color);
   text-decoration: none;
 }
 .disqus-wrapper a:hover {
   color: #cc4000;
 }
 
-/* Optional: scrollbar accent */
 .disqus-wrapper ::-webkit-scrollbar-thumb {
-  background-color: #ff5000;
+  background-color: var(--dynamic-color);
 }
+
 /* ===== Gallery ===== */
 #indrixFooterGallery {
   display: flex;
@@ -315,6 +313,11 @@ figure h3 {
   font-weight: bold;
   padding: 0.5rem;
   margin: 0;
+}
+
+figure h3 a {
+  text-decoration: none;
+  color: #222;
 }
 
 .indrixLabels {
@@ -368,7 +371,7 @@ figure h3 {
   color: #24292f;
   margin-bottom: 0.5rem;
   padding-left: 0.25rem;
-  border-left: 4px solid #0969da;
+  border-left: 4px solid var(--dynamic-color);
   background-color: #f6f8fa;
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
@@ -384,7 +387,7 @@ figure h3 {
 
 .series-content a {
   position: relative;
-  color: #0969da;
+  color: var(--dynamic-color);
   padding-left: 1.5rem;
   font-size: 14px;
   line-height: 1.5;
@@ -488,7 +491,7 @@ figure h3 {
   }
 
 :root {
-  --main-color: #ff5000;
+  --dynamic-color: #ff5000;
 }
 
 .blog-article {
@@ -498,7 +501,7 @@ figure h3 {
 }
 
 .article-title {
-  color: var(--main-color);
+  color: var(--dynamic-color);
   margin-bottom: 10px;
 }
 
@@ -528,7 +531,7 @@ figure h3 {
 
 .writer-label {
   font-style: italic;
-  color: var(--main-color);
+  color: var(--dynamic-color);
 }
 
 .meta-dates {
@@ -541,7 +544,7 @@ figure h3 {
 }
 
 .meta-dates strong {
-  color: var(--main-color);
+  color: var(--dynamic-color);
 }
 
 .author-link {
@@ -600,7 +603,7 @@ figure h3 {
   color: #222;
 }
 .latest-meta a {
-  color: #ff5000;
+  color: var(--dynamic-color);
   text-decoration: none;
 }
 .latest-meta a:hover {
@@ -618,7 +621,7 @@ figure h3 {
 }
 .style-variant-all {
   background: #fefefe;
-  border-left: 4px solid #ff5000;
+  border-left: 4px solid var(--dynamic-color);
 }
 .latest-actions {
   margin-top: 10px;
@@ -644,15 +647,15 @@ figure h3 {
   color: #fff;
 }
 .share-icon svg { pointer-events: none; }
-.share-icon.fb { background: #ff5000; }
-.share-icon.x { background: #ff5000; }
-.share-icon.li { background: #ff5000; }
+.share-icon.fb { background: var(--dynamic-color); }
+.share-icon.x { background: var(--dynamic-color); }
+.share-icon.li { background: var(--dynamic-color); }
 
 .share-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #ff5000;
+  background: var(--dynamic-color);
   color: #fff;
   border: none;
   padding: 6px 12px;
@@ -665,31 +668,20 @@ figure h3 {
 .read-more {
   margin-left: auto;
   background: transparent;
-  color: #ff5000;
-  border: 1px solid #ff5000;
+  color: var(--dynamic-color);
+  border: 1px solid var(--dynamic-color);
   padding: 6px 12px;
   border-radius: 4px;
   text-decoration: none;
   font-size: 0.85rem;
 }
 .read-more:hover {
-  background: #ff5000;
+  background: var(--dynamic-color);
   color: #fff;
 }
     
 hr {
   border: none;
-  height: 1px; /* ketebalan garis */
-  background-color: #ff5000; /* warna garis */
+  height: 1px;
+  background-color: var(--dynamic-color);
 }
-
-
-
-
-
-
-
-
-
-
-
