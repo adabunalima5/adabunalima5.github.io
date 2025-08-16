@@ -683,7 +683,7 @@ hr {
   height: 1px;
   background-color: var(--dynamic-color);
 }
-h2, h3, h4, b, li, ul, ol {
+h2, h3, h4, b, li, ul, ol, footer {
   color: var(--dynamic-color);
 }
 
