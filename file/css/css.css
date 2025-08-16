@@ -1,3 +1,6 @@
+:root {
+  --dynamic-color: #00000000;
+}
 /* ===== Global Reset and Base ===== */
 html, body {
   font-family: 'Inter', sans-serif;
@@ -489,11 +492,6 @@ figure h3 a {
     text-decoration: none;
     color: #222;
   }
-
-:root {
-  --dynamic-color: #ff5000;
-}
-
 .blog-article {
   margin-bottom: 40px;
   border-bottom: 1px solid #ddd;
