@@ -686,4 +686,49 @@ hr {
 h2, h3, h4, b, li, ul, ol, footer {
   color: var(--dynamic-color);
 }
+.widget-search {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--dynamic-color);
+  z-index: 9999;
+  padding: 6px 8px;
+  box-sizing: border-box;
+}
+
+.widget-search form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-btn,
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.home-btn:hover,
+.search-btn:hover {
+  color: #ccc;
+}
+
+.widget-search input {
+  flex-grow: 1;
+  padding: 9px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background: #eee;
+  color: var(--dynamic-color);
+  border-radius: 4px;
+}
 
