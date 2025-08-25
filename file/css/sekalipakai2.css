@@ -1,0 +1,118 @@
+  /* Grid dasar */  
+  .maya-grid {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  
+    gap: 16px;  
+    margin-top: 20px;  
+  }  
+
+  /* Box tiap artikel */  
+  .maya-box {  
+    background: #fff;  
+    border: 1px solid #eee;  
+    border-radius: 12px;  
+    padding: 16px;  
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);  
+    transition: transform 0.2s ease, box-shadow 0.2s ease;  
+  }  
+  .maya-box:hover {  
+    transform: translateY(-4px);  
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);  
+  }  
+
+  /* Judul */  
+  .maya-heading {  
+    margin: 0 0 14px 0;  
+    font-size: 22px;  
+    font-weight: 700;  
+    line-height: 1.4;  
+    color: #111;  
+  }  
+
+  /* Deskripsi */  
+  .maya-desc {  
+    font-size: 14px;  
+    color: #555;  
+    line-height: 1.5;  
+    margin: 0 0 12px 0;  
+  }  
+
+  /* Meta info */  
+  .maya-meta {  
+    font-size: 13px;  
+    color: #777;  
+    margin-bottom: 12px;  
+  }  
+  .maya-meta a {  
+    color: #0073e6;  
+    text-decoration: none;  
+  }  
+  .maya-meta a:hover {  
+    text-decoration: underline;  
+  }  
+
+  .maya-author-img {  
+    vertical-align: middle;  
+  }  
+
+  /* 🔥 Tombol Read More */  
+  .maya-readmore {  
+    display: inline-block;  
+    padding: 8px 14px;  
+    background: var(--dynamic-color);  
+    color: #fff;  
+    border-radius: 6px;  
+    font-size: 14px;  
+    text-decoration: none;  
+    transition: background 0.2s ease;  
+  }  
+  .maya-readmore:hover {  
+    background: #0056b3;  
+  }
+.responsive-iframe {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Rasio 16:9 */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.responsive-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+#indrixFooterGallery figure {
+  margin: 0 0 20px 0;
+}
+#indrixFooterGallery ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+#indrixFooterGallery ul li {
+  background: #f3f3f3;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+#indrixFooterGallery ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+
+
+
+
+
+
+
+
