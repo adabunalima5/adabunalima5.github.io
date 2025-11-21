@@ -164,10 +164,10 @@ header {
 #menuPanel {
   display: none;
   background: var(--dynamic-color);
-  border-top: 1px solid #ddd;
+  border-top: 3px solid #000;
   width: 100%;
   position: fixed;
-  top: 0px;
+  top: 56px;
   left: 0;
   right: 0;
   z-index: 998;
