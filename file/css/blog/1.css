@@ -1,7 +1,7 @@
 :root {
   --dynamic-color: #008080;
-  --font-ui: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-  --font-mono: SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+  --font-ui: system-ui;
+  --font-mono: system-ui;
 }
 /* ===== Global Reset and Base ===== */
 html, body {
