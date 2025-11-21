@@ -161,11 +161,11 @@ header {
 /* ===== Menu Panel ===== */
 #menuPanel {
   display: none;
-  background: #fff;
+  background: var(--dynamic-color);
   border-top: 1px solid #ddd;
   width: 100%;
   position: fixed;
-  top: 56px;
+  top: 0px;
   left: 0;
   right: 0;
   z-index: 998;
