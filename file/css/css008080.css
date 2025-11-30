@@ -732,3 +732,121 @@ h2, h3, h4, b, li, ul, ol, footer {
   color: var(--dynamic-color);
   border-radius: 4px;
 }
+
+
+
+  /* layout grid */
+  #galleryContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 768px) {
+    #galleryContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #galleryContainer {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* snippet (paragraf pertama) */
+  #galleryContainer .post-snippet {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+    margin-top: 10px;
+  }
+  #galleryContainer .post-snippet p {
+    margin: 0;
+  }
+
+  /* label/tag */
+  #galleryContainer .indri {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #555;
+  }
+  #galleryContainer .indri a {
+    display: inline-block;
+    background: #f9f9f9;
+    padding: 5px 10px;
+    margin: 3px 4px 0 0;
+    border-radius: 20px;
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+  }
+  #galleryContainer .indri a:hover {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+  }
+
+  /* card tiap item */
+  #galleryContainer > div {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  #galleryContainer > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  }
+
+  /* judul postingan */
+  #galleryContainer .post-title {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+  #galleryContainer .post-title a {
+    color: #222;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  #galleryContainer .post-title a:hover {
+    color: #0077cc;
+  }
+
+  /* efek hover gambar */
+  #galleryContainer img {
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.35s ease, filter 0.35s ease;
+    width: 100%;
+    height: auto;
+  }
+  #galleryContainer img:hover {
+    transform: scale(1.04);
+    filter: brightness(1.08);
+  }
+
+  /* navigasi tombol */
+  #galleryNav button {
+    background: var(--dynamic-color);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 6px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  #galleryNav button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  #galleryNav button:hover:not(:disabled) {
+    background: #005fa3;
+  }
+
+
