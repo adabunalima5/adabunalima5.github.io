@@ -459,7 +459,7 @@ figure h3 a {
     font-size: 13.5px;
   }
 }
-.spo {
+.spo, .label-cloud {
   position: fixed;
   top: 0;
   left: 100%;
