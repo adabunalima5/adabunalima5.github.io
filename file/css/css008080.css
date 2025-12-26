@@ -849,4 +849,9 @@ h2, h3, h4, b, li, ul, ol, footer {
     background: #005fa3;
   }
 
-
+svg {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
