@@ -460,16 +460,31 @@ figure h3 a {
   }
 }
 .spo, .label-cloud {
-  position: fixed;
-  top: 0;
-  left: 100%;
-  width: 100vw;
-  height: 100vh;
-  background: #00000f;
-  overflow-y: auto;
-  z-index: 9999;
-  padding: 10px;
-  box-sizing: border-box;
+  color: #ffffff;
+}
+
+/* Semua link di dalam .spo */
+.spo a,
+.spo a:visited,
+.spo a:hover,
+.spo a:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Jika ada heading di dalamnya */
+.spo h1,
+.spo h2,
+.spo h3,
+.spo h4,
+.spo h5,
+.spo h6 {
+  color: #ffffff;
+}
+
+/* Jika ada paragraf */
+.spo p {
+  color: #ffffff;
 }
 
 /* Gaya grid ringan tanpa efek berat */
