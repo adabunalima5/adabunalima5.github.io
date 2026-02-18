@@ -460,10 +460,16 @@ figure h3 a {
   }
 }
 .spo, .label-cloud {
-  color: #ffffff;
-  max-height: 120px;
-  width: 100%;
-  overflow:auto;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100vw;
+  height: 100vh;
+  background: #00000f;
+  overflow-y: auto;
+  z-index: 9999;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 /* Semua link di dalam .spo */
