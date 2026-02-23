@@ -459,17 +459,24 @@ figure h3 a {
     font-size: 13.5px;
   }
 }
-.spo, .label-cloud {
-  position: fixed;
-  top: 0;
-  left: 100%;
-  width: 100vw;
-  height: 100vh;
-  background: #00000f;
-  overflow-y: auto;
-  z-index: 9999;
-  padding: 10px;
-  box-sizing: border-box;
+.spo {
+  position: relative;
+  padding: 12px;
+  margin: 16px 0;
+  background: #f9f9f9;
+  border-left: 4px solid #ff9800;
+  font-size: 14px;
+}
+
+.spo::before {
+  content: "Sponsored Contents";
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #ff9800;
+  margin-bottom: 6px;
 }
 
 /* Semua link di dalam .spo */
