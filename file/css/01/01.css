@@ -471,51 +471,6 @@ figure h3 a {
   box-sizing: border-box;
 }
 
-/* Semua link di dalam .spo */
-.spo a,
-.spo a:visited,
-.spo a:hover,
-.spo a:active {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-/* Jika ada heading di dalamnya */
-.spo h1,
-.spo h2,
-.spo h3,
-.spo h4,
-.spo h5,
-.spo h6 {
-  color: #ffffff;
-}
-
-/* Jika ada paragraf */
-.spo p {
-  color: #ffffff;
-}
-
-/* Gaya grid ringan tanpa efek berat */
-  .photo-box-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
-    margin-top: 16px;
-  }
-  .photo-box {
-    border: 1px solid #ddd;
-    padding: 8px;
-    background: #fafafa;
-  }
-  .photo-box h3 {
-    font-size: 14px;
-    margin: 8px 0 0;
-    text-align: center;
-  }
-  .photo-box h3 a {
-    text-decoration: none;
-    color: #222;
-  }
 .blog-article {
   margin-bottom: 40px;
   border-bottom: 1px solid #ddd;
