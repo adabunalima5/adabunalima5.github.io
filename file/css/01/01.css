@@ -380,7 +380,6 @@ figure h3 a {
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
 }
-
 .series-content {
   counter-reset: item;
   display: flex;
